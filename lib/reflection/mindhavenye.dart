@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meloc/reflection/soulmirrorq.dart';
 
 class Mindhavenye extends StatefulWidget {
   const Mindhavenye({super.key});
@@ -7,7 +9,6 @@ class Mindhavenye extends StatefulWidget {
   @override
   State<Mindhavenye> createState() => _Mindhavenye();
 }
-
 
 class _Mindhavenye extends State<Mindhavenye> {
   @override
@@ -66,63 +67,80 @@ class _Mindhavenye extends State<Mindhavenye> {
 
                     Row(
                       children: [
-                        Container(
-                        width: 95,
-                        height: 45,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(32),
-                          gradient: const LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              Color.fromRGBO(35, 37, 43, 1),
-                              Color.fromRGBO(35, 37, 43, 1),
-                            ],
-                          ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Cancel",
-                            style: GoogleFonts.staatliches(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              color: const Color.fromRGBO(255, 255, 255, 1),
+                        GestureDetector(
+                          behavior: HitTestBehavior.translucent,
+                          onTap: () {
+                            Get.back();
+                          },
+                          child: Container(
+                            width: 95,
+                            height: 45,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(32),
+                              gradient: const LinearGradient(
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight,
+                                colors: [
+                                  Color.fromRGBO(35, 37, 43, 1),
+                                  Color.fromRGBO(35, 37, 43, 1),
+                                ],
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                      
-
-                      Padding(
-                        padding: const EdgeInsets.only(left: 14),
-                        child: Container(
-                          width: 95,
-                          height: 45,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(32),
-                            gradient: const LinearGradient(
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
-                              colors: [
-                                Color.fromRGBO(131, 85, 255, 1),
-                                Color.fromRGBO(243, 85, 252, 1),
-                              ],
-                            ),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Recharge",
-                              style: GoogleFonts.staatliches(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                                color: const Color.fromRGBO(255, 255, 255, 1),
+                            child: Center(
+                              child: Text(
+                                "Cancel",
+                                style: GoogleFonts.staatliches(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: const Color.fromRGBO(255, 255, 255, 1),
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
+
+                        Padding(
+                          padding: const EdgeInsets.only(left: 14),
+                          child: GestureDetector(
+                            behavior: HitTestBehavior.translucent,
+                            onTap: () {
+                              Get.back();
+                              Get.to(Soulmirrorq());
+                            },
+                            child: Container(
+                              width: 95,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(32),
+                                gradient: const LinearGradient(
+                                  begin: Alignment.centerLeft,
+                                  end: Alignment.centerRight,
+                                  colors: [
+                                    Color.fromRGBO(131, 85, 255, 1),
+                                    Color.fromRGBO(243, 85, 252, 1),
+                                  ],
+                                ),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Recharge",
+                                  style: GoogleFonts.staatliches(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: const Color.fromRGBO(
+                                      255,
+                                      255,
+                                      255,
+                                      1,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),

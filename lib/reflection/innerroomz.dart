@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meloc/ainnerchild/heartmirrorstor.dart';
+import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
+import 'package:meloc/reflection/mindhavenye.dart';
 
 class Innerroomz extends StatefulWidget {
-  const Innerroomz({super.key});
+  const Innerroomz({
+    super.key,
+ 
+  });
+
+
 
   @override
   State<Innerroomz> createState() => _Innerroomz();
@@ -65,63 +74,106 @@ class _Innerroomz extends State<Innerroomz> {
 
                     Row(
                       children: [
-                        Container(
-                        width: 95,
-                        height: 45,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(32),
-                          gradient: const LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              Color.fromRGBO(35, 37, 43, 1),
-                              Color.fromRGBO(35, 37, 43, 1),
-                            ],
-                          ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Cancel",
-                            style: GoogleFonts.staatliches(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              color: const Color.fromRGBO(255, 255, 255, 1),
+                        InkWell(
+                          splashColor: Color.fromRGBO(12, 12, 56, 0),
+                          onTap: () {
+                            Get.back();
+                          },
+                          child: Container(
+                            width: 95,
+                            height: 45,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(32),
+                              gradient: const LinearGradient(
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight,
+                                colors: [
+                                  Color.fromRGBO(35, 37, 43, 1),
+                                  Color.fromRGBO(35, 37, 43, 1),
+                                ],
+                              ),
                             ),
-                          ),
-                        ),
-                      ),
-                      
-
-                      Padding(
-                        padding: const EdgeInsets.only(left: 14),
-                        child: Container(
-                          width: 95,
-                          height: 45,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(32),
-                            gradient: const LinearGradient(
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
-                              colors: [
-                                Color.fromRGBO(131, 85, 255, 1),
-                                Color.fromRGBO(243, 85, 252, 1),
-                              ],
-                            ),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Sure",
-                              style: GoogleFonts.staatliches(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400,
-                                color: const Color.fromRGBO(255, 255, 255, 1),
+                            child: Center(
+                              child: Text(
+                                "Cancel",
+                                style: GoogleFonts.staatliches(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: const Color.fromRGBO(255, 255, 255, 1),
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
+
+                        Padding(
+                          padding: const EdgeInsets.only(left: 14),
+                          child: InkWell(
+                            splashColor: Color.fromRGBO(12, 12, 56, 0),
+                            onTap: () async {
+                              final softnessu = SilenceDate()
+                                  .kindnessGetUs()
+                                  .firstWhere(
+                                    (meloc) =>
+                                        meloc.lonelysoulid ==
+                                        Mindtalksju().forgivelid,
+                                  )
+                                  .toJson();
+
+                              if (softnessu["peacepathcoins"] >= 100) {
+                                await SilenceDate().mindbranchGai(
+                                  Mindtalksju().forgivelid,
+                                  peacepathcoins:
+                                      softnessu["peacepathcoins"] - 100,
+                                );
+
+                               
+
+                                Mindtalksju().lisanageinrom = List.from(
+                                  Mindtalksju().lisanageinrom,
+                                );
+
+                                 Get.back(result: "true");
+
+                              } else {
+                                Get.dialog(Mindhavenye());
+                              }
+                             
+                            },
+                            child: Container(
+                              width: 95,
+                              height: 45,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(32),
+                                gradient: const LinearGradient(
+                                  begin: Alignment.centerLeft,
+                                  end: Alignment.centerRight,
+                                  colors: [
+                                    Color.fromRGBO(131, 85, 255, 1),
+                                    Color.fromRGBO(243, 85, 252, 1),
+                                  ],
+                                ),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Sure",
+                                  style: GoogleFonts.staatliches(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: const Color.fromRGBO(
+                                      255,
+                                      255,
+                                      255,
+                                      1,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),

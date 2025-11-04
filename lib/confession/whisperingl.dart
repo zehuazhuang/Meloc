@@ -1,7 +1,13 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meloc/ainnerchild/heartmirrorstor.dart';
+import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
+import 'package:meloc/confession/paisorrownf.dart';
+import 'package:meloc/melancholy/unspokens.dart';
 
 class Whisperingl extends StatefulWidget {
   const Whisperingl({super.key});
@@ -62,11 +68,17 @@ class _Whisperingl extends State<Whisperingl> {
                             alignment: AlignmentDirectional(-0.9, 1),
                             child: Transform.rotate(
                               angle: 90 * (math.pi / 90),
-                              child: Image.asset(
-                                "assets/images/zxciqj.png",
-                                width: 32,
-                                height: 32,
-                                fit: BoxFit.cover,
+                              child: InkWell(
+                                splashColor: Color.fromRGBO(12, 12, 56, 0),
+                                onTap: () {
+                                  Get.back();
+                                },
+                                child: Image.asset(
+                                  "assets/images/zxciqj.png",
+                                  width: 32,
+                                  height: 32,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           ),
@@ -141,18 +153,29 @@ class _Whisperingl extends State<Whisperingl> {
                                   color: const Color.fromRGBO(255, 255, 255, 1),
                                 ),
                               ),
-                              Text(
-                                "FORGOT?",
-                                style: GoogleFonts.dosis(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w500,
-                                  color: const Color.fromRGBO(255, 255, 255, 1),
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: Color.fromRGBO(
-                                    255,
-                                    255,
-                                    255,
-                                    1,
+                              InkWell(
+                                splashColor: Color.fromRGBO(12, 12, 56, 0),
+                                onTap: () {
+                                  Get.to(Paisorrownf());
+                                },
+                                child: Text(
+                                  "FORGOT?",
+                                  style: GoogleFonts.dosis(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                    color: const Color.fromRGBO(
+                                      255,
+                                      255,
+                                      255,
+                                      1,
+                                    ),
+                                    decoration: TextDecoration.underline,
+                                    decorationColor: Color.fromRGBO(
+                                      255,
+                                      255,
+                                      255,
+                                      1,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -194,36 +217,67 @@ class _Whisperingl extends State<Whisperingl> {
                         ],
                       ),
                     ),
-                     Container(height: 70),
+                    Container(height: 70),
                     Align(
                       alignment: AlignmentDirectional(0, 0),
-                      child: Container(
-                        width: 279,
-                        height: 52,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(32),
-                          gradient: const LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              Color.fromRGBO(131, 85, 255, 1),
-                              Color.fromRGBO(243, 85, 252, 1),
-                            ],
+                      child: InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () async {
+
+                          await SilenceDate().oregretryload();
+
+
+                          final feharborus = SilenceDate()
+                              .kindnessGetUs()
+                              .where(
+                                (meloc) =>
+                                    meloc.solacelightemail ==
+                                        _vulnerabilite.text &&
+                                    meloc.forestmindpasw == _nostalgiam.text,
+                              )
+                              .toList();
+                          if (feharborus.isNotEmpty) {
+                            final whisperlog = feharborus
+                                .map((e) => e.toJson())
+                                .toList()
+                                .first;
+                            Mindtalksju().forgivelid =
+                                whisperlog["lonelysoulid"];
+                            Get.to(Unspokens());
+                          } else {
+                            SmartDialog.showToast(
+                              "Incorrect email or password entered",
+                            );
+                          }
+                        },
+                        child: Container(
+                          width: 279,
+                          height: 52,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            gradient: const LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                Color.fromRGBO(131, 85, 255, 1),
+                                Color.fromRGBO(243, 85, 252, 1),
+                              ],
+                            ),
                           ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sign in",
-                            style: GoogleFonts.staatliches(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              color: const Color.fromRGBO(255, 255, 255, 1),
+                          child: Center(
+                            child: Text(
+                              "Sign in",
+                              style: GoogleFonts.staatliches(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: const Color.fromRGBO(255, 255, 255, 1),
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                     Container(height: 30),
+                    Container(height: 30),
                   ],
                 ),
               ),

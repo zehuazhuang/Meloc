@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meloc/ainnerchild/heartmirrorstor.dart';
+import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
+import 'package:meloc/confession/tiosecrecyni.dart';
 
 class Compassiond extends StatefulWidget {
   const Compassiond({super.key});
@@ -28,8 +32,8 @@ class _Compassiond extends State<Compassiond> {
         children: [
           SizedBox(
             width: 311,
-            height: 255,
-          
+            height: 295,
+
             child: Stack(
               children: [
                 Image.asset(
@@ -38,7 +42,7 @@ class _Compassiond extends State<Compassiond> {
                   height: 255,
                   fit: BoxFit.fill,
                 ),
-          
+
                 Flex(
                   direction: Axis.vertical,
                   children: [
@@ -51,7 +55,7 @@ class _Compassiond extends State<Compassiond> {
                         color: const Color.fromRGBO(255, 255, 255, 1),
                       ),
                     ),
-          
+
                     Padding(
                       padding: const EdgeInsets.symmetric(
                         vertical: 16,
@@ -66,34 +70,56 @@ class _Compassiond extends State<Compassiond> {
                         ),
                       ),
                     ),
-          
-                    Container(
-                      width: 279,
-                      height: 52,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(32),
-                        gradient: const LinearGradient(
-                          begin: Alignment.centerLeft,
-                          end: Alignment.centerRight,
-                          colors: [
-                            Color.fromRGBO(131, 85, 255, 1),
-                            Color.fromRGBO(243, 85, 252, 1),
-                          ],
+
+                    GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () async {
+                        await SilenceDate().oregretryload();
+
+                        Get.offAll(Tiosecrecyni());
+                     
+
+                        if(Mindtalksju().forgivelid==7){
+                         await SilenceDate().mindbranchGai(7,
+                          kindthoughtavatar: "assets/images/ameloc.png",
+                          gentlepathname: "Tourists",
+                          peacepathcoins: 0,
+                          omfortflowblocked: [],
+                          mentalquietfollow: [],
+                          heartvoicefans: [],
+                          );
+                        }
+                      
+                        await Future.delayed(const Duration(milliseconds: 661));
+                         Mindtalksju().griememf = 1;
+                        Mindtalksju().forgivelid = -1;
+                      },
+                      child: Container(
+                        width: 260,
+                        height: 52,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(32),
+                          gradient: const LinearGradient(
+                            begin: Alignment.centerLeft,
+                            end: Alignment.centerRight,
+                            colors: [
+                              Color.fromRGBO(131, 85, 255, 1),
+                              Color.fromRGBO(243, 85, 252, 1),
+                            ],
+                          ),
                         ),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Sure",
-                          style: GoogleFonts.staatliches(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: const Color.fromRGBO(255, 255, 255, 1),
+                        child: Center(
+                          child: Text(
+                            "Sure",
+                            style: GoogleFonts.staatliches(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              color: const Color.fromRGBO(255, 255, 255, 1),
+                            ),
                           ),
                         ),
                       ),
                     ),
-          
-          
                   ],
                 ),
               ],
@@ -101,16 +127,25 @@ class _Compassiond extends State<Compassiond> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(top: 280),
-            child: ClipOval(
-              child: Container(
-                width: 45,
-                height: 45,
-                color: Color.fromRGBO(255, 255, 255, .15),
-                child: Icon(Icons.close,color: Color.fromRGBO(255, 255, 255, 1)),
+            padding: const EdgeInsets.only(top: 300),
+            child: GestureDetector(
+              behavior: HitTestBehavior.translucent,
+              onTap: () {
+                Get.back();
+              },
+              child: ClipOval(
+                child: Container(
+                  width: 45,
+                  height: 45,
+                  color: Color.fromRGBO(255, 255, 255, .15),
+                  child: Icon(
+                    Icons.close,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

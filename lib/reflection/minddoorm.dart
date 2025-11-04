@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meloc/ainnerchild/heartmirrorstor.dart';
+import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
+import 'package:meloc/ainnerchild/peacivityeui.dart';
+import 'package:meloc/melancholy/tranquilityv.dart';
+import 'package:meloc/reflection/hopepaths.dart';
+import 'package:meloc/reflection/soulmirrorq.dart';
 
 class Minddoorm extends StatefulWidget {
   const Minddoorm({super.key});
@@ -21,6 +28,11 @@ class _Minddoorm extends State<Minddoorm> {
 
   @override
   Widget build(BuildContext context) {
+    final selftrustu = SilenceDate()
+        .kindnessGetUs()
+        .firstWhere((meloc) => meloc.lonelysoulid == Mindtalksju().forgivelid)
+        .toJson();
+
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -47,11 +59,19 @@ class _Minddoorm extends State<Minddoorm> {
                     children: [
                       Align(
                         alignment: AlignmentDirectional(0.9, 1),
-                        child: Image.asset(
-                          "assets/images/zxiuchqws.png",
-                          width: 32,
-                          height: 32,
-                          fit: BoxFit.cover,
+                        child: InkWell(
+                          splashColor: Color.fromRGBO(12, 12, 56, 0),
+                          onTap: () {
+                            Get.to(Hopepaths())?.then((_) {
+                              setState(() {});
+                            });
+                          },
+                          child: Image.asset(
+                            "assets/images/zxiuchqws.png",
+                            width: 32,
+                            height: 32,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ],
@@ -83,7 +103,7 @@ class _Minddoorm extends State<Minddoorm> {
                           ),
                           child: ClipOval(
                             child: Image.asset(
-                              "assets/images/ameloc.png",
+                              selftrustu["kindthoughtavatar"],
                               width: 68,
                               height: 68,
                               fit: BoxFit.cover,
@@ -93,7 +113,7 @@ class _Minddoorm extends State<Minddoorm> {
                         Padding(
                           padding: const EdgeInsets.only(top: 16, bottom: 6),
                           child: Text(
-                            "Username",
+                            selftrustu["gentlepathname"],
                             style: GoogleFonts.staatliches(
                               fontSize: 20,
                               fontWeight: FontWeight.w400,
@@ -107,7 +127,7 @@ class _Minddoorm extends State<Minddoorm> {
                             Column(
                               children: [
                                 Text(
-                                  "66",
+                                  Mindtalksju().forgivelid>6?"0":"1",
                                   style: GoogleFonts.staatliches(
                                     fontSize: 24,
                                     fontWeight: FontWeight.w400,
@@ -137,7 +157,7 @@ class _Minddoorm extends State<Minddoorm> {
                             Column(
                               children: [
                                 Text(
-                                  "66",
+                                  "${selftrustu["heartvoicefans"].length}",
                                   style: GoogleFonts.staatliches(
                                     fontSize: 24,
                                     fontWeight: FontWeight.w400,
@@ -167,7 +187,7 @@ class _Minddoorm extends State<Minddoorm> {
                             Column(
                               children: [
                                 Text(
-                                  "66",
+                                  "${selftrustu["mentalquietfollow"].length}",
                                   style: GoogleFonts.staatliches(
                                     fontSize: 24,
                                     fontWeight: FontWeight.w400,
@@ -202,76 +222,84 @@ class _Minddoorm extends State<Minddoorm> {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: Container(
-                    width: 327,
-                    height: 90,
-                    decoration: BoxDecoration(),
-                    child: Stack(
-                      children: [
-                        Image.asset(
-                          "assets/images/iochql.png",
-                          width: 327,
-                          height: 90,
-                          fit: BoxFit.cover,
-                        ),
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                left: 39,
-                                right: 24,
+                  child: InkWell(
+                    splashColor: Color.fromRGBO(12, 12, 56, 0),
+                    onTap: () {
+                      Get.to(Soulmirrorq())?.then((_) {
+                        setState(() {});
+                      });
+                    },
+                    child: Container(
+                      width: 327,
+                      height: 90,
+                      decoration: BoxDecoration(),
+                      child: Stack(
+                        children: [
+                          Image.asset(
+                            "assets/images/iochql.png",
+                            width: 327,
+                            height: 90,
+                            fit: BoxFit.cover,
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  left: 39,
+                                  right: 24,
+                                ),
+                                child: Image.asset(
+                                  "assets/images/zxhcuiqwz.png",
+                                  width: 72,
+                                  height: 72,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                              child: Image.asset(
-                                "assets/images/zxhcuiqwz.png",
-                                width: 72,
-                                height: 72,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  "6600",
-                                  style: GoogleFonts.staatliches(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color.fromRGBO(
-                                      255,
-                                      255,
-                                      255,
-                                      1,
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "${selftrustu["peacepathcoins"]}",
+                                    style: GoogleFonts.staatliches(
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.w400,
+                                      color: const Color.fromRGBO(
+                                        255,
+                                        255,
+                                        255,
+                                        1,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Text(
-                                  "Wallet",
-                                  style: GoogleFonts.dosis(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500,
-                                    color: const Color.fromRGBO(
-                                      255,
-                                      255,
-                                      255,
-                                      .6,
+                                  Text(
+                                    "Wallet",
+                                    style: GoogleFonts.dosis(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500,
+                                      color: const Color.fromRGBO(
+                                        255,
+                                        255,
+                                        255,
+                                        .6,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            Spacer(),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 0, 30, 0),
-                              child: Image.asset(
-                                "assets/images/zxciqj.png",
-                                width: 32,
-                                height: 32,
-                                fit: BoxFit.cover,
+                                ],
                               ),
-                            ),
-                          ],
-                        ),
-                      ],
+                              Spacer(),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 0, 30, 0),
+                                child: Image.asset(
+                                  "assets/images/zxciqj.png",
+                                  width: 32,
+                                  height: 32,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -286,34 +314,64 @@ class _Minddoorm extends State<Minddoorm> {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
-                      child: Wrap(
-                        children: [
-                          Container(
-                            width: 101,
-                            height: 140,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage("assets/images/ameloc.png"),
-                                fit: BoxFit.cover,
+                      child: Builder(
+                        builder: (context) {
+                          final cargracep = SilenceDate()
+                              .emotionalityPs()
+                              .where(
+                                (meloc) =>
+                                    meloc.atherlightuid ==
+                                    Mindtalksju().forgivelid,
+                              )
+                              .map((e) => e.toJson())
+                              .toList();
+
+                          if (cargracep.isEmpty) {
+                            return SizedBox();
+                          }
+                          return Wrap(
+                            children: [
+                              InkWell(
+                                splashColor: Color.fromRGBO(12, 12, 56, 0),
+                                onTap: () {
+                                  Get.to(
+                                    Tranquilityv(
+                                      mindtreepid:
+                                          cargracep[0]["onestthoughid"],
+                                      eartseurl: cargracep[0]["mindgarvido"],
+                                    ),
+                                  );
+                                },
+                                child: Container(
+                                  width: 101,
+                                  height: 140,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        cargracep[0]["comfortzoneimg"],
+                                      ),
+                                      fit: BoxFit.cover,
+                                    ),
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  alignment: Alignment.center,
+                                  child: Icon(
+                                    Icons.play_arrow_rounded,
+                                    color: Color.fromRGBO(255, 255, 255, 1),
+                                    size: 30,
+                                  ),
+                                ),
                               ),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            alignment: Alignment.center,
-                            child: Icon(
-                              Icons.play_arrow_rounded,
-                              color: Color.fromRGBO(255, 255, 255, 1),
-                              size: 30,
-                            ),
-                          ),
-                        ],
+                            ],
+                          );
+                        },
                       ),
                     ),
                   ),
                 ),
-
-                
               ],
             ),
+            mindfulBom(),
           ],
         ),
       ),

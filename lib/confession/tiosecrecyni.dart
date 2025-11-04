@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meloc/ainnerchild/heartmirrorstor.dart';
+import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
+import 'package:meloc/confession/itheartenyv.dart';
+import 'package:meloc/confession/othserenityez.dart';
+import 'package:meloc/confession/whisperingl.dart';
+import 'package:meloc/melancholy/unspokens.dart';
 
 class Tiosecrecyni extends StatefulWidget {
   const Tiosecrecyni({super.key});
@@ -9,7 +16,7 @@ class Tiosecrecyni extends StatefulWidget {
 }
 
 class _Tiosecrecyni extends State<Tiosecrecyni> {
-  bool _mfoemort = false;
+  bool _mfoemort = true;
   @override
   void initState() {
     super.initState();
@@ -84,99 +91,123 @@ class _Tiosecrecyni extends State<Tiosecrecyni> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        width: 160,
-                        height: 108,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/xzcnilb.png"),
+                      InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () {
+                          Get.to(Whisperingl());
+                        },
+                        child: Container(
+                          width: 160,
+                          height: 108,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/xzcnilb.png"),
+                            ),
                           ),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(0, -0.7),
-                              child: Text(
-                                'Login by email',
-                                style: GoogleFonts.poppins(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w500,
-                                  color: const Color.fromRGBO(255, 255, 255, 1),
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(0, -0.7),
+                                child: Text(
+                                  'Login by email',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    color: const Color.fromRGBO(255, 255, 255, 1),
+                                  ),
                                 ),
                               ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0.8, 0.8),
-                              child: Image.asset(
-                                "assets/images/zxciqj.png",
-                                width: 32,
-                                height: 32,
-                                fit: BoxFit.cover,
+                              Align(
+                                alignment: AlignmentDirectional(0.8, 0.8),
+                                child: Image.asset(
+                                  "assets/images/zxciqj.png",
+                                  width: 32,
+                                  height: 32,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(width: 12),
-                      Container(
-                        width: 160,
-                        height: 108,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/iuwniusl.png"),
+                      InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () async {
+
+                          await SilenceDate().oregretryload();
+
+                          Mindtalksju().forgivelid = 7;
+
+
+                          Get.to(Unspokens());
+                        },
+                        child: Container(
+                          width: 160,
+                          height: 108,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage("assets/images/iuwniusl.png"),
+                            ),
                           ),
-                        ),
-                        child: Stack(
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(0, -0.7),
-                              child: Text(
-                                "I'm new",
-                                style: GoogleFonts.poppins(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w500,
-                                  color: const Color.fromRGBO(255, 255, 255, 1),
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: AlignmentDirectional(0, -0.7),
+                                child: Text(
+                                  "I'm new",
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    color: const Color.fromRGBO(255, 255, 255, 1),
+                                  ),
                                 ),
                               ),
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(0.8, 0.8),
-                              child: Image.asset(
-                                "assets/images/zxciqj.png",
-                                width: 32,
-                                height: 32,
-                                fit: BoxFit.cover,
+                              Align(
+                                alignment: AlignmentDirectional(0.8, 0.8),
+                                child: Image.asset(
+                                  "assets/images/zxciqj.png",
+                                  width: 32,
+                                  height: 32,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ],
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 40),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Don't have an account? ",
-                          style: GoogleFonts.dosis(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: const Color.fromRGBO(255, 255, 255, 1),
+                    child: InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () {
+                          Get.to(Othserenityez());
+                        },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Don't have an account? ",
+                            style: GoogleFonts.dosis(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: const Color.fromRGBO(255, 255, 255, 1),
+                            ),
                           ),
-                        ),
-                        Text(
-                          "Sign up",
-                          style: GoogleFonts.dosis(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                            color: const Color.fromRGBO(255, 255, 255, 1),
-                            decoration: TextDecoration.underline,
-                            decorationColor: Color.fromRGBO(255, 255, 255, 1),
+                          Text(
+                            "Sign up",
+                            style: GoogleFonts.dosis(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                              color: const Color.fromRGBO(255, 255, 255, 1),
+                              decoration: TextDecoration.underline,
+                              decorationColor: Color.fromRGBO(255, 255, 255, 1),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
 
@@ -211,37 +242,49 @@ class _Tiosecrecyni extends State<Tiosecrecyni> {
                       Text(
                         "Agree with   ",
                         style: GoogleFonts.dosis(
-                          fontSize: 14,
+                          fontSize: 13,
                           fontWeight: FontWeight.w500,
                           color: const Color.fromRGBO(255, 255, 255, 1),
                         ),
                       ),
-                      Text(
-                        "User Agreement",
-                        style: GoogleFonts.dosis(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: const Color.fromRGBO(255, 255, 255, 1),
-                          decoration: TextDecoration.underline,
-                          decorationColor: Color.fromRGBO(255, 255, 255, 1),
+                      InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () {
+                          Get.to(Itheartenyv(silentcryv: 'https://app.snyf0exn.link/users',));
+                        },
+                        child: Text(
+                          "User Agreement",
+                          style: GoogleFonts.dosis(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                            color: const Color.fromRGBO(255, 255, 255, 1),
+                            decoration: TextDecoration.underline,
+                            decorationColor: Color.fromRGBO(255, 255, 255, 1),
+                          ),
                         ),
                       ),
                       Text(
                         "   and ",
                         style: GoogleFonts.dosis(
-                          fontSize: 14,
+                          fontSize: 13,
                           fontWeight: FontWeight.w500,
                           color: const Color.fromRGBO(255, 255, 255, 1),
                         ),
                       ),
-                      Text(
-                        "Privacy Policy",
-                        style: GoogleFonts.dosis(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                          color: const Color.fromRGBO(255, 255, 255, 1),
-                          decoration: TextDecoration.underline,
-                          decorationColor: Color.fromRGBO(255, 255, 255, 1),
+                       InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () {
+                          Get.to(Itheartenyv(silentcryv: 'https://app.snyf0exn.link/privacy',));
+                        },
+                        child: Text(
+                          "Privacy Policy",
+                          style: GoogleFonts.dosis(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                            color: const Color.fromRGBO(255, 255, 255, 1),
+                            decoration: TextDecoration.underline,
+                            decorationColor: Color.fromRGBO(255, 255, 255, 1),
+                          ),
                         ),
                       ),
                     ],

@@ -1,7 +1,10 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meloc/ainnerchild/heartmirrorstor.dart';
+import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
 
 class Recoveryh extends StatefulWidget {
   const Recoveryh({super.key});
@@ -23,6 +26,11 @@ class _Recoveryh extends State<Recoveryh> {
 
   @override
   Widget build(BuildContext context) {
+    final artstreamu = SilenceDate()
+        .kindnessGetUs()
+        .firstWhere((meloc) => meloc.lonelysoulid == Mindtalksju().forgivelid)
+        .toJson();
+
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -47,11 +55,17 @@ class _Recoveryh extends State<Recoveryh> {
                     alignment: AlignmentDirectional(-0.9, 1),
                     child: Transform.rotate(
                       angle: 90 * (math.pi / 90),
-                      child: Image.asset(
-                        "assets/images/zxciqj.png",
-                        width: 32,
-                        height: 32,
-                        fit: BoxFit.cover,
+                      child: InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: Image.asset(
+                          "assets/images/zxciqj.png",
+                          width: 32,
+                          height: 32,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
@@ -76,82 +90,122 @@ class _Recoveryh extends State<Recoveryh> {
                 Container(height: 100),
                 SizedBox(
                   width: 335,
-                  child: Wrap(
-                    runSpacing: 15,
-                    spacing: 15,
-                    children: List.generate(3, (index) {
-                      return Container(
-                        width: 160,
-                        height: 160,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/xzcuniut.png"),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(right: 6),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                      color: Color.fromRGBO(255, 255, 255, 1),
-                                      width: 0.5,
-                                    ),
-                                  ),
-                                  child: ClipOval(
-                                    child: Image.asset(
-                                      "assets/images/ameloc.png",
-                                      width: 40,
-                                      height: 40,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
+                  child: Builder(
+                    builder: (context) {
+                      final artbranchu = SilenceDate()
+                          .kindnessGetUs()
+                          .where(
+                            (meloc) => artstreamu["omfortflowblocked"].contains(
+                              meloc.lonelysoulid,
+                            ),
+                          )
+                          .map((e) => e.toJson())
+                          .toList();
+                      return Wrap(
+                        runSpacing: 15,
+                        spacing: 15,
+                        children: List.generate(artbranchu.length, (index) {
+                          return Container(
+                            width: 160,
+                            height: 160,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  "assets/images/xzcuniut1.png",
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 12,
-                                  bottom: 14,
-                                ),
-                                child: Text(
-                                  "sign in",
-                                  style: GoogleFonts.staatliches(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color.fromRGBO(
-                                      255,
-                                      255,
-                                      255,
-                                      1,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 6),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: Color.fromRGBO(
+                                            255,
+                                            255,
+                                            255,
+                                            1,
+                                          ),
+                                          width: 0.5,
+                                        ),
+                                      ),
+                                      child: ClipOval(
+                                        child: Image.asset(
+                                          artbranchu[index]["kindthoughtavatar"],
+                                          width: 40,
+                                          height: 40,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                      top: 12,
+                                      bottom: 14,
+                                    ),
+                                    child: Text(
+                                      artbranchu[index]["gentlepathname"],
+                                      style: GoogleFonts.staatliches(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w400,
+                                        color: const Color.fromRGBO(
+                                          255,
+                                          255,
+                                          255,
+                                          1,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
 
-                              Container(
-                                width: 88,
-                                height: 38,
-                                decoration: BoxDecoration(
-                                  color: Color.fromRGBO(255, 255, 255, .2),
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                                alignment: AlignmentDirectional(0, 0),
-                                child: Icon(
-                                  Icons.close,
-                                  color: Color.fromRGBO(255, 255, 255, 1),
-                                  size: 22,
-                                ),
+                                  InkWell(
+                                    splashColor: Color.fromRGBO(12, 12, 56, 0),
+                                    onTap: () async {
+                                      artstreamu["omfortflowblocked"].remove(
+                                        artbranchu[index]["lonelysoulid"],
+                                      );
+
+                                      await SilenceDate().mindbranchGai(
+                                        Mindtalksju().forgivelid,
+                                        omfortflowblocked:
+                                            artstreamu["omfortflowblocked"],
+                                      );
+                                      setState(() {});
+                                    },
+                                    child: Container(
+                                      width: 88,
+                                      height: 38,
+                                      decoration: BoxDecoration(
+                                        color: Color.fromRGBO(
+                                          255,
+                                          255,
+                                          255,
+                                          .2,
+                                        ),
+                                        borderRadius: BorderRadius.circular(30),
+                                      ),
+                                      alignment: AlignmentDirectional(0, 0),
+                                      child: Icon(
+                                        Icons.close,
+                                        color: Color.fromRGBO(255, 255, 255, 1),
+                                        size: 22,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ),
+                            ),
+                          );
+                        }),
                       );
-                    }),
+                    },
                   ),
                 ),
               ],

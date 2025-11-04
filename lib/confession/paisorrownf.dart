@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Paisorrownf extends StatefulWidget {
@@ -63,11 +64,17 @@ class _Paisorrownf extends State<Paisorrownf> {
                             alignment: AlignmentDirectional(-0.9, 1),
                             child: Transform.rotate(
                               angle: 90 * (math.pi / 90),
-                              child: Image.asset(
-                                "assets/images/zxciqj.png",
-                                width: 32,
-                                height: 32,
-                                fit: BoxFit.cover,
+                              child: InkWell(
+                                splashColor: Color.fromRGBO(12, 12, 56, 0),
+                                onTap: () {
+                                  Get.back();
+                                },
+                                child: Image.asset(
+                                  "assets/images/zxciqj.png",
+                                  width: 32,
+                                  height: 32,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           ),
@@ -155,6 +162,7 @@ class _Paisorrownf extends State<Paisorrownf> {
                                   vertical: 10,
                                 ),
                                 child: TextField(
+                                  obscureText: true,
                                   controller: _innerlightm,
                                   style: TextStyle(
                                     color: Color.fromRGBO(255, 255, 255, 1),
@@ -196,6 +204,7 @@ class _Paisorrownf extends State<Paisorrownf> {
                                   vertical: 10,
                                 ),
                                 child: TextField(
+                                   obscureText: true,
                                   controller: _afespacem,
                                   style: TextStyle(
                                     color: Color.fromRGBO(255, 255, 255, 1),
@@ -215,36 +224,42 @@ class _Paisorrownf extends State<Paisorrownf> {
                         ],
                       ),
                     ),
-                     Container(height: 70),
+                    Container(height: 70),
                     Align(
                       alignment: AlignmentDirectional(0, 0),
-                      child: Container(
-                        width: 279,
-                        height: 52,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(32),
-                          gradient: const LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              Color.fromRGBO(131, 85, 255, 1),
-                              Color.fromRGBO(243, 85, 252, 1),
-                            ],
+                      child: InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () {
+                          
+                        },
+                        child: Container(
+                          width: 279,
+                          height: 52,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            gradient: const LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                Color.fromRGBO(131, 85, 255, 1),
+                                Color.fromRGBO(243, 85, 252, 1),
+                              ],
+                            ),
                           ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Save",
-                            style: GoogleFonts.staatliches(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              color: const Color.fromRGBO(255, 255, 255, 1),
+                          child: Center(
+                            child: Text(
+                              "Save",
+                              style: GoogleFonts.staatliches(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: const Color.fromRGBO(255, 255, 255, 1),
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                     Container(height: 30),
+                    Container(height: 30),
                   ],
                 ),
               ),

@@ -1,10 +1,17 @@
 import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meloc/ainnerchild/heartmirrorstor.dart';
+import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
+import 'package:meloc/melancholy/calmechor.dart';
+import 'package:meloc/melancholy/tranquilityv.dart';
+import 'package:meloc/solitude/tranquilityc.dart';
 
 class Rithonestyt extends StatefulWidget {
-  const Rithonestyt({super.key});
+  const Rithonestyt({super.key, required this.indmirroruid});
+
+  final int indmirroruid;
 
   @override
   State<Rithonestyt> createState() => _Rithonestyt();
@@ -23,6 +30,11 @@ class _Rithonestyt extends State<Rithonestyt> {
 
   @override
   Widget build(BuildContext context) {
+    final odmirroru = SilenceDate()
+        .kindnessGetUs()
+        .firstWhere((meloc) => meloc.lonelysoulid == widget.indmirroruid)
+        .toJson();
+
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -32,10 +44,10 @@ class _Rithonestyt extends State<Rithonestyt> {
         body: Stack(
           children: [
             Image.asset(
-              "assets/images/ameloc.png",
+              odmirroru["kindthoughtavatar"],
               width: double.infinity,
               height: double.infinity,
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
             ),
             Container(
               width: 375,
@@ -57,25 +69,41 @@ class _Rithonestyt extends State<Rithonestyt> {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 18, bottom: 36),
-                  child: Container(
-                    width: 101,
-                    height: 140,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/ameloc.png"),
-                        fit: BoxFit.cover,
+                Builder(
+                  builder: (context) {
+                    final elfbloomps = SilenceDate()
+                        .emotionalityPs()
+                        .firstWhere(
+                          (meloc) => meloc.atherlightuid == widget.indmirroruid,
+                        )
+                        .toJson();
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 18, bottom: 36),
+                      child: InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () {
+                          Get.to(Tranquilityv(mindtreepid: elfbloomps["onestthoughid"], eartseurl: elfbloomps["mindgarvido"]));
+                        },
+                        child: Container(
+                          width: 101,
+                          height: 140,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(elfbloomps["comfortzoneimg"]),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          alignment: Alignment.center,
+                          child: Icon(
+                            Icons.play_arrow_rounded,
+                            color: Color.fromRGBO(255, 255, 255, 1),
+                            size: 30,
+                          ),
+                        ),
                       ),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    alignment: Alignment.center,
-                    child: Icon(
-                      Icons.play_arrow_rounded,
-                      color: Color.fromRGBO(255, 255, 255, 1),
-                      size: 30,
-                    ),
-                  ),
+                    );
+                  },
                 ),
                 Container(
                   width: double.infinity,
@@ -95,7 +123,7 @@ class _Rithonestyt extends State<Rithonestyt> {
                           offset: Offset(0, -16),
                           child: ClipOval(
                             child: Image.asset(
-                              "assets/images/zxiuchuiqt.png",
+                              odmirroru["kindthoughtavatar"],
                               width: 55,
                               height: 55,
                               fit: BoxFit.cover,
@@ -110,7 +138,7 @@ class _Rithonestyt extends State<Rithonestyt> {
                           Padding(
                             padding: const EdgeInsets.only(top: 46, bottom: 16),
                             child: Text(
-                              "Alea pueno",
+                              odmirroru["gentlepathname"],
                               style: GoogleFonts.dosis(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w400,
@@ -124,7 +152,7 @@ class _Rithonestyt extends State<Rithonestyt> {
                               Column(
                                 children: [
                                   Text(
-                                    "66",
+                                    "1",
                                     style: GoogleFonts.staatliches(
                                       fontSize: 24,
                                       fontWeight: FontWeight.w400,
@@ -154,7 +182,7 @@ class _Rithonestyt extends State<Rithonestyt> {
                               Column(
                                 children: [
                                   Text(
-                                    "66",
+                                    "${odmirroru["heartvoicefans"].length}",
                                     style: GoogleFonts.staatliches(
                                       fontSize: 24,
                                       fontWeight: FontWeight.w400,
@@ -184,7 +212,7 @@ class _Rithonestyt extends State<Rithonestyt> {
                               Column(
                                 children: [
                                   Text(
-                                    "66",
+                                    "${odmirroru["mentalquietfollow"].length}",
                                     style: GoogleFonts.staatliches(
                                       fontSize: 24,
                                       fontWeight: FontWeight.w400,
@@ -213,29 +241,49 @@ class _Rithonestyt extends State<Rithonestyt> {
                               ),
                             ],
                           ),
+                           if(widget.indmirroruid!=Mindtalksju().forgivelid)
                           Padding(
                             padding: const EdgeInsets.fromLTRB(20, 22, 20, 0),
                             child: Row(
                               children: [
                                 Expanded(
-                                  child: Container(
-                                    width: double.infinity,
-                                    height: 58,
-                                    decoration: BoxDecoration(
-                                      color: Color.fromRGBO(255, 255, 255, .2),
-                                      borderRadius: BorderRadius.circular(30),
-                                    ),
-                                    alignment: AlignmentDirectional(0, 0),
-                                    child: Text(
-                                      "Chat",
-                                      style: GoogleFonts.staatliches(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w400,
-                                        color: const Color.fromRGBO(
+                                  child: InkWell(
+                                    splashColor: Color.fromRGBO(12, 12, 56, 0),
+                                    onTap: () async {
+                                      int dharborcid = await SilenceDate()
+                                          .getacceptNewid(widget.indmirroruid);
+
+                                      Get.to(
+                                        Tranquilityc(
+                                          rpeacefulchid: dharborcid,
+                                          eartbeatu: odmirroru,
+                                        ),
+                                      );
+                                    },
+                                    child: Container(
+                                      width: double.infinity,
+                                      height: 58,
+                                      decoration: BoxDecoration(
+                                        color: Color.fromRGBO(
                                           255,
                                           255,
                                           255,
-                                          1,
+                                          .2,
+                                        ),
+                                        borderRadius: BorderRadius.circular(30),
+                                      ),
+                                      alignment: AlignmentDirectional(0, 0),
+                                      child: Text(
+                                        "Chat",
+                                        style: GoogleFonts.staatliches(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          color: const Color.fromRGBO(
+                                            255,
+                                            255,
+                                            255,
+                                            1,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -243,24 +291,42 @@ class _Rithonestyt extends State<Rithonestyt> {
                                 ),
                                 Container(width: 17),
                                 Expanded(
-                                  child: Container(
-                                    width: double.infinity,
-                                    height: 58,
-                                    decoration: BoxDecoration(
-                                      color: Color.fromRGBO(255, 255, 255, .2),
-                                      borderRadius: BorderRadius.circular(30),
-                                    ),
-                                    alignment: AlignmentDirectional(0, 0),
-                                    child: Text(
-                                      "Follow",
-                                      style: GoogleFonts.staatliches(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w400,
-                                        color: const Color.fromRGBO(
+                                  child: InkWell(
+                                    splashColor: Color.fromRGBO(12, 12, 56, 0),
+                                    onTap: () async {
+                                      await SilenceDate().fortzonefoll(
+                                        widget.indmirroruid,
+                                      );
+                                      setState(() {});
+                                    },
+                                    child: Container(
+                                      width: double.infinity,
+                                      height: 58,
+                                      decoration: BoxDecoration(
+                                        color: Color.fromRGBO(
                                           255,
                                           255,
                                           255,
-                                          1,
+                                          .2,
+                                        ),
+                                        borderRadius: BorderRadius.circular(30),
+                                      ),
+                                      alignment: AlignmentDirectional(0, 0),
+                                      child: Text(
+                                        odmirroru["heartvoicefans"].contains(
+                                              Mindtalksju().forgivelid,
+                                            )
+                                            ? "Following"
+                                            : "Follow",
+                                        style: GoogleFonts.staatliches(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          color: const Color.fromRGBO(
+                                            255,
+                                            255,
+                                            255,
+                                            1,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -287,21 +353,34 @@ class _Rithonestyt extends State<Rithonestyt> {
                     alignment: AlignmentDirectional(-0.9, 1),
                     child: Transform.rotate(
                       angle: 90 * (math.pi / 90),
+                      child: InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: Image.asset(
+                          "assets/images/zxciqj.png",
+                          width: 32,
+                          height: 32,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ),
+                  if(widget.indmirroruid!=Mindtalksju().forgivelid)
+                  Align(
+                    alignment: AlignmentDirectional(0.9, 1),
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () {
+                        Get.dialog(Calmechor(shelteruid: widget.indmirroruid));
+                      },
                       child: Image.asset(
-                        "assets/images/zxciqj.png",
+                        "assets/images/sadsaqwe.png",
                         width: 32,
                         height: 32,
                         fit: BoxFit.cover,
                       ),
-                    ),
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional(0.9, 1),
-                    child: Image.asset(
-                      "assets/images/sadsaqwe.png",
-                      width: 32,
-                      height: 32,
-                      fit: BoxFit.cover,
                     ),
                   ),
                 ],

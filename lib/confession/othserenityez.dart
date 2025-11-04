@@ -1,7 +1,12 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meloc/ainnerchild/affectionatu.dart';
+import 'package:meloc/ainnerchild/heartmirrorstor.dart';
+import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
+import 'package:meloc/melancholy/unspokens.dart';
 
 class Othserenityez extends StatefulWidget {
   const Othserenityez({super.key});
@@ -63,11 +68,17 @@ class _Othserenityez extends State<Othserenityez> {
                             alignment: AlignmentDirectional(-0.9, 1),
                             child: Transform.rotate(
                               angle: 90 * (math.pi / 90),
-                              child: Image.asset(
-                                "assets/images/zxciqj.png",
-                                width: 32,
-                                height: 32,
-                                fit: BoxFit.cover,
+                              child: InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () {
+                          Get.back();
+                        },
+                                child: Image.asset(
+                                  "assets/images/zxciqj.png",
+                                  width: 32,
+                                  height: 32,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           ),
@@ -155,6 +166,7 @@ class _Othserenityez extends State<Othserenityez> {
                                   vertical: 10,
                                 ),
                                 child: TextField(
+                                  obscureText: true,
                                   controller: _emptinessm,
                                   style: TextStyle(
                                     color: Color.fromRGBO(255, 255, 255, 1),
@@ -196,6 +208,7 @@ class _Othserenityez extends State<Othserenityez> {
                                   vertical: 10,
                                 ),
                                 child: TextField(
+                                  obscureText: true,
                                   controller: _comfortingm,
                                   style: TextStyle(
                                     color: Color.fromRGBO(255, 255, 255, 1),
@@ -215,36 +228,68 @@ class _Othserenityez extends State<Othserenityez> {
                         ],
                       ),
                     ),
-                     Container(height: 70),
+                    Container(height: 70),
                     Align(
                       alignment: AlignmentDirectional(0, 0),
-                      child: Container(
-                        width: 279,
-                        height: 52,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(32),
-                          gradient: const LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              Color.fromRGBO(131, 85, 255, 1),
-                              Color.fromRGBO(243, 85, 252, 1),
-                            ],
+                      child: InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () async {
+
+                          if(_isolatione.text==""||_comfortingm.text==""||_emptinessm.text==""){
+                            return;
+                          }
+
+                          await SilenceDate().oregretryload();
+
+                          int sernate = SilenceDate().kindnessGetUs().length+1;
+                          
+                         await SilenceDate().addNewThmirrorUser(
+                            ThmirrorUser(
+                              lonelysoulid: sernate,
+                              emotionbridges: ["assets/images/xzcuniut1.png"],
+                              solacelightemail: _isolatione.text,
+                              forestmindpasw: _emptinessm.text,
+                              kindthoughtavatar: "assets/images/ameloc.png",
+                              gentlepathname: "User",
+                              peacepathcoins: 0,
+                              omfortflowblocked: [],
+                              mentalquietfollow: [],
+                              heartvoicefans: [],
+                            ),
+                          );
+
+                           Mindtalksju().forgivelid = sernate;
+
+                          Get.to(Unspokens());
+                        },
+                        child: Container(
+                          width: 279,
+                          height: 52,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            gradient: const LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                Color.fromRGBO(131, 85, 255, 1),
+                                Color.fromRGBO(243, 85, 252, 1),
+                              ],
+                            ),
                           ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Sign up",
-                            style: GoogleFonts.staatliches(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              color: const Color.fromRGBO(255, 255, 255, 1),
+                          child: Center(
+                            child: Text(
+                              "Sign up",
+                              style: GoogleFonts.staatliches(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: const Color.fromRGBO(255, 255, 255, 1),
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                     Container(height: 30),
+                    Container(height: 30),
                   ],
                 ),
               ),

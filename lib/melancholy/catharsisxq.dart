@@ -1,7 +1,10 @@
 import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
+import 'package:meloc/melancholy/fragilitys.dart';
 
 class Catharsisxq extends StatefulWidget {
   const Catharsisxq({super.key});
@@ -11,6 +14,8 @@ class Catharsisxq extends StatefulWidget {
 }
 
 class _Catharsisxq extends State<Catharsisxq> {
+
+  int _tionpoold = -1;
   @override
   void initState() {
     super.initState();
@@ -20,6 +25,8 @@ class _Catharsisxq extends State<Catharsisxq> {
   void dispose() {
     super.dispose();
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -60,11 +67,17 @@ class _Catharsisxq extends State<Catharsisxq> {
                             alignment: AlignmentDirectional(-0.9, 1),
                             child: Transform.rotate(
                               angle: 90 * (math.pi / 90),
-                              child: Image.asset(
-                                "assets/images/zxciqj.png",
-                                width: 32,
-                                height: 32,
-                                fit: BoxFit.cover,
+                              child: InkWell(
+                                splashColor: Color.fromRGBO(12, 12, 56, 0),
+                                onTap: () {
+                                  Get.back();
+                                },
+                                child: Image.asset(
+                                  "assets/images/zxciqj.png",
+                                  width: 32,
+                                  height: 32,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           ),
@@ -119,11 +132,21 @@ class _Catharsisxq extends State<Catharsisxq> {
                             spacing: 24,
                             runSpacing: 28,
                             children: List.generate(5, (index) {
-                              return Image.asset(
-                                "assets/images/xzcwqx1.png",
-                                width: 92,
-                                height: 92,
-                                fit: BoxFit.cover,
+                              return InkWell(
+                                splashColor: Color.fromRGBO(12, 12, 56, 0),
+                                onTap: () {
+                                  _tionpoold = index;
+                                  Mindtalksju().truemodemo = "assets/images/xzcwqx$index$_tionpoold.png";
+                                  setState(() {});
+                                },
+                                child: Image.asset(
+                                  _tionpoold == index
+                                      ? "assets/images/xzcwqx$index$_tionpoold.png"
+                                      : "assets/images/xzcwqx$index.png",
+                                  width: 92,
+                                  height: 92,
+                                  fit: BoxFit.cover,
+                                ),
                               );
                             }),
                           ),
@@ -133,27 +156,38 @@ class _Catharsisxq extends State<Catharsisxq> {
 
                     Align(
                       alignment: AlignmentDirectional(0, 0),
-                      child: Container(
-                        width: 198,
-                        height: 52,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(32),
-                          gradient: const LinearGradient(
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                            colors: [
-                              Color.fromRGBO(131, 85, 255, 1),
-                              Color.fromRGBO(243, 85, 252, 1),
-                            ],
+                      child: InkWell(
+                        splashColor: Color.fromRGBO(12, 12, 56, 0),
+                        onTap: () {
+                         if(Mindtalksju().truemodemo!=""){
+                            Get.off(() => Fragilitys());
+                            Mindtalksju().truemodemo= "";
+                         }else{
+                          SmartDialog.showToast("Please select an emoji");
+                         }
+                        },
+                        child: Container(
+                          width: 198,
+                          height: 52,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(32),
+                            gradient: const LinearGradient(
+                              begin: Alignment.centerLeft,
+                              end: Alignment.centerRight,
+                              colors: [
+                                Color.fromRGBO(131, 85, 255, 1),
+                                Color.fromRGBO(243, 85, 252, 1),
+                              ],
+                            ),
                           ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Next",
-                            style: GoogleFonts.staatliches(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              color: const Color.fromRGBO(255, 255, 255, 1),
+                          child: Center(
+                            child: Text(
+                              "Next",
+                              style: GoogleFonts.staatliches(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: const Color.fromRGBO(255, 255, 255, 1),
+                              ),
                             ),
                           ),
                         ),
