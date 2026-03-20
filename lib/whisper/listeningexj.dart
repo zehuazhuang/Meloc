@@ -259,7 +259,7 @@ class _Listeningexj extends State<Listeningexj> {
                       child: Text(
                         "Click on the blank seat to start chatting",
                         style: GoogleFonts.dosis(
-                          fontSize: 18,
+                          fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: const Color.fromRGBO(255, 255, 255, 1),
                         ),
@@ -420,7 +420,7 @@ class _Listeningexj extends State<Listeningexj> {
                                       child: Text(
                                         sadnesus["gentlepathname"],
                                         style: GoogleFonts.dosis(
-                                          fontSize: 14,
+                                          fontSize: 12,
                                           fontWeight: FontWeight.w500,
                                           color: const Color.fromRGBO(
                                             255,
