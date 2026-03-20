@@ -39,7 +39,7 @@ jobs:
 
       - flutter/install_sdk_and_pub:
           channel: stable
-          version: 3.27.3 # 你本机的flutter版本
+          version: 3.32.6 # 你本机的flutter版本
 
       - run:
           name: Flutter Build
