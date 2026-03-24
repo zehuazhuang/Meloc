@@ -9,6 +9,7 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:meloc/ainnerchild/heartmirrorstor.dart';
 import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
 import 'package:meloc/melancholy/calmechor.dart';
+import 'package:meloc/solitude/wmindbeatavef.dart';
 import 'package:record/record.dart';
 
 class Tranquilityc extends StatefulWidget {
@@ -457,6 +458,38 @@ class _Tranquilityc extends State<Tranquilityc> {
                                     Icons.photo_size_select_actual_outlined,
                                     color: Color.fromRGBO(255, 255, 255, 1),
                                     size: 24,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 12),
+                                child: InkWell(
+                                  splashColor: Color.fromRGBO(12, 12, 56, 0),
+                                  onTap: () async {
+                                   
+                                Get.to(Wmindbeatavef(huthwhispt: widget.eartbeatu,));
+                                  
+                                  },
+                                  child: Container(
+                                    width: 40,
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      gradient: const LinearGradient(
+                                        begin: Alignment.centerLeft,
+                                        end: Alignment.centerRight,
+                                        colors: [
+                                          Color.fromRGBO(131, 85, 255, 1),
+                                          Color.fromRGBO(243, 85, 252, 1),
+                                        ],
+                                      ),
+                                    ),
+                                    alignment: AlignmentDirectional(0, 0),
+                                    child: Icon(
+                                      Icons.videocam_outlined,
+                                      color: Color.fromRGBO(255, 255, 255, 1),
+                                      size: 24,
+                                    ),
                                   ),
                                 ),
                               ),

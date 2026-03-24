@@ -49,6 +49,10 @@ class _Tiosecrecyni extends State<Tiosecrecyni> {
               height: 377,
               fit: BoxFit.fill,
             ),
+
+
+
+            
             Center(
               child: Flex(
                 direction: Axis.vertical,

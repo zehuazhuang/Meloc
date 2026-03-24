@@ -23,6 +23,10 @@ class Mindtalksju extends ChangeNotifier {
       _forgivelid = duochropr.getInt('ff_forgivelid') ?? _forgivelid;
     });
 
+     _safeInit(() {
+      _staecitage = duochropr.getInt('ff_staecitage') ?? _staecitage;
+    });
+
     _safeInit(() {
       _tionrivercomm =
           duochropr.getStringList('ff_tionrivercomm')?.map((x) {
@@ -50,7 +54,14 @@ class Mindtalksju extends ChangeNotifier {
 
   late SharedPreferences duochropr;
 
-  int _forgivelid = -1;
+  int _staecitage = -1;
+  int get staecitage => _staecitage;
+  set staecitage(int value) {
+    _staecitage = value;
+    duochropr.setInt('ff_staecitage', value);
+  }
+
+    int _forgivelid = -1;
   int get forgivelid => _forgivelid;
   set forgivelid(int value) {
     _forgivelid = value;
@@ -125,7 +136,7 @@ class Mindtalksju extends ChangeNotifier {
 
   static dynamic mindwhispe = [
     {
-      "comforttalinfo": [400, 0.99, "rkibhlmuvfxuqbmm"],
+      "comforttalinfo": [400, 0.99, "rkibhlmuvfxuqbmm"], 
     },
     {
       "comforttalinfo": [800, 1.99, "oefzrktznfwbrclt"],

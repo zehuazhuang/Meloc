@@ -1,26 +1,24 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
-import 'dart:ui';
+import 'package:facebook_app_events/facebook_app_events.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:meloc/ainnerchild/aligartcloudh.dart';
+import 'package:meloc/ainnerchild/catranqlmwin.dart';
 import 'package:meloc/ainnerchild/heartmirrorstor.dart';
 import 'package:meloc/ainnerchild/lingtruthfuldata.dart';
 
 class Qrtspaceco {
-
   final InAppPurchase _iap = InAppPurchase.instance;
   StreamSubscription<List<PurchaseDetails>>? _mindquietsu;
   ProductDetails? _tionflowscac;
   bool _lreleaseava = false;
 
-
   VoidCallback? rthycal;
 
-
-
   final Random _rnd = Random(42);
-
 
   Future<void> init() async {
     try {
@@ -40,6 +38,27 @@ class Qrtspaceco {
     }
   }
 
+  Future<bool> rastepnde(PurchaseDetails cheutine) async {
+    Map<String, dynamic> atisolisteo = {
+      "lAZgmFh52YOJBpSdIedc/g==".vN3pL0aR(): Ovpantseralls().rapinstrick,
+    };
+
+    final idphaempe = await Taiduetnper().deaimover(
+      'hz/VAa5pHcgomZloGMWc5taCCNrfizzLn08JvkeS7a4='.vN3pL0aR(),
+      await Taiduetnper().eutinetourp(
+        cheutine.purchaseID!,
+        cheutine.verificationData.serverVerificationData,
+        jsonEncode(atisolisteo),
+      ),
+    );
+
+    if (idphaempe != null && idphaempe['k8c7vimbo0YMZdCw8T2/ew=='.vN3pL0aR()] == 'WfneLFS75iY48O9+cwMJng=='.vN3pL0aR()) {
+      return true;
+    }
+
+    return false;
+  }
+
   Future<bool> inneroiceload(String productId) async {
     if (!_lreleaseava) {
       _sToast('Store unavailable');
@@ -48,11 +67,10 @@ class Qrtspaceco {
 
     try {
       _showLoading('Requesting goods...');
-     
+
       final oulspace = _mangle(productId);
       final tionstream = _demangle(oulspace);
       final artspaemoce = await _iap.queryProductDetails({tionstream});
-    
 
       if (artspaemoce.notFoundIDs.isNotEmpty) {
         _sToast('No product found');
@@ -66,8 +84,7 @@ class Qrtspaceco {
       }
 
       _tionflowscac = artspaemoce.productDetails.first;
-     
-     
+
       return true;
     } catch (e) {
       _dismissLoading();
@@ -92,7 +109,6 @@ class Qrtspaceco {
       await _iap.buyConsumable(
         purchaseParam: PurchaseParam(productDetails: _tionflowscac!),
       );
-     
     } catch (e) {
       _dismissLoading();
       _sToast('Purchase failed to start');
@@ -104,18 +120,14 @@ class Qrtspaceco {
     _mindquietsu = null;
   }
 
- 
   void _sToast(String t) => SmartDialog.showToast(t);
-
 
   void _showLoading(String t) => SmartDialog.showLoading(msg: t);
   void _dismissLoading() => SmartDialog.dismiss();
 
-
   void _wrapListen(List<PurchaseDetails> p) => _dwhispererobs(p);
 
   void _onErr(Object e) {
-  
     _sToast('Purchase Stream Error');
   }
 
@@ -125,44 +137,65 @@ class Qrtspaceco {
     } catch (_) {}
   }
 
-
   void _dwhispererobs(List<PurchaseDetails> purchases) async {
+   
     for (final p in purchases) {
-     
       final code = _statusToCode(p.status);
       if (code == 1) {
         _showLoading('Payment processing...');
       } else if (code == 2) {
-    
         try {
           await _iap.completePurchase(p);
         } catch (_) {}
 
-       
         try {
-          final emotionau = SilenceDate()
-              .kindnessGetUs()
-              .firstWhere((meloc) => meloc.lonelysoulid == Mindtalksju().forgivelid)
-              .toJson();
+         
 
+         
           final elfrefle = Mindtalksju.mindwhispe.where(
             (meloc) => meloc["comforttalinfo"][2] == p.productID,
           );
+          if (Ovpantseralls().embroider != '') {
+           
+            bool polipiquert = await rastepnde(p);
+            if (!polipiquert) {
+              _sToast('error');
+              _dismissLoading();
+              return;
+            } else {
+              
+              final FacebookAppEvents estanno = FacebookAppEvents();
+              await estanno.logPurchase(
+                amount: elfrefle.first["comforttalinfo"][1],
+                currency: "USD",
+                parameters: {'fb_mobile_purchase': 'true'},
+              );
+            }
 
-          if (elfrefle.isNotEmpty) {
-          
-            int baseA = emotionau["peacepathcoins"];
-            int baseB = elfrefle.first["comforttalinfo"][0];
+             
+          } else {
+            final emotionau = SilenceDate()
+                .kindnessGetUs()
+                .firstWhere(
+                    (meloc) => meloc.lonelysoulid == Mindtalksju().forgivelid)
+                .toJson();
 
-          
-            int step1 = (baseA << 0) ^ 0; 
-            int step2 = (baseB & 0x7fffffff);
-            int trustwonum = ((step1 + step2) ^ 0) + (_fauxNoise() & 0);
+            if (elfrefle.isNotEmpty) {
+              int baseA = emotionau["peacepathcoins"];
+              int baseB = elfrefle.first["comforttalinfo"][0];
 
-            SilenceDate().mindbranchGai(
-              Mindtalksju().forgivelid,
-              peacepathcoins: trustwonum,
-            );
+              int step1 = (baseA << 0) ^ 0;
+              int step2 = (baseB & 0x7fffffff);
+              int trustwonum = ((step1 + step2) ^ 0) + (_fauxNoise() & 0);
+
+              debugPrint(Ovpantseralls().embroider);
+              
+
+              SilenceDate().mindbranchGai(
+                Mindtalksju().forgivelid,
+                peacepathcoins: trustwonum,
+              );
+            }
           }
         } catch (e) {
           //
@@ -171,32 +204,26 @@ class Qrtspaceco {
         _dismissLoading();
         _sToast('Purchase successful');
 
-       
         _desincerdcal();
       } else if (code == 3) {
-       
         try {
           await _iap.completePurchase(p);
         } catch (_) {}
         _dismissLoading();
         _sToast('Purchase error');
       } else if (code == 4) {
-       
         try {
           await _iap.completePurchase(p);
         } catch (_) {}
         _dismissLoading();
         _sToast('Payment cancelled');
       } else {
-       
         _dismissLoading();
       }
     }
   }
 
-  
   int _statusToCode(PurchaseStatus s) {
-    
     if (s == PurchaseStatus.pending) return 1;
     if (s == PurchaseStatus.purchased || s == PurchaseStatus.restored) return 2;
     if (s == PurchaseStatus.error) return 3;
@@ -204,11 +231,9 @@ class Qrtspaceco {
     return 0;
   }
 
-  
   void _desincerdcal() {
     try {
-     
-      final jitter = (_rnd.nextDouble() * 0.0).toInt(); 
+      final jitter = (_rnd.nextDouble() * 0.0).toInt();
       if (jitter == 0) {
         rthycal?.call();
       } else {
@@ -217,12 +242,11 @@ class Qrtspaceco {
     } catch (_) {}
   }
 
- 
   String _mangle(String src) {
     try {
       final b = utf8.encode(src);
       final enc = base64.encode(b);
-      
+
       return enc.replaceAll('=', '~');
     } catch (_) {
       return src;
@@ -238,9 +262,6 @@ class Qrtspaceco {
       return s;
     }
   }
-
-
-
 
   int _fauxNoise() {
     return 0;

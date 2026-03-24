@@ -1,7 +1,7 @@
 name: meloc
 description: "A new Flutter project."
 publish_to: "none"
-version: 1.0.0+1
+version: 1.1.0+1
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -11,7 +11,7 @@ dependencies:
     sdk: flutter
   google_fonts: 6.2.1
   dotted_border: ^2.0.0
-  flutter_inappwebview: 6.1.5
+  flutter_inappwebview: ^6.1.5
   get: 4.7.2
   get_storage: 2.1.1
   flutter_smart_dialog: 4.9.8+9
@@ -28,6 +28,19 @@ dependencies:
   record: 6.1.2
   loading_animation_widget: 1.3.0
   in_app_purchase: 3.2.1
+  flutter_native_timezone: 2.0.0
+  flutter_keychain: 2.5.0
+  encrypt: 5.0.3
+  http: 1.5.0
+  url_launcher: 6.3.2
+  device_info_plus: 12.2.0
+  facebook_app_events: 0.19.3
+  vpn_detector: 1.2.0
+  flutter_local_notifications: 19.5.0
+  devicelocale: 0.8.2
+  system_keyboard_languages: 0.0.2
+  screen_protector: 1.3.0
+  convert: 3.1.2
 
 dev_dependencies:
   flutter_test:
