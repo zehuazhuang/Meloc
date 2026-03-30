@@ -27,7 +27,7 @@ class _MustretChingpInit extends State<MustretChingpInit> {
   }
 
   htvaltrainread() async {
-    if (!DateTime.now().isAfter(DateTime(2026, 3, 29, 10, 02, 0))) {
+    if (!DateTime.now().isAfter(DateTime(2026, 4, 07, 10, 02, 0))) {
       await Future.delayed(const Duration(milliseconds: 368));
 
       
